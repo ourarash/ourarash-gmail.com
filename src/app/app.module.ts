@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,13 +18,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatListModule } from '@angular/material/list';
+import { CreateQuizComponent } from './create-quiz/create-quiz.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionComponent,
     BottomSheetError,
-    BottomSheetCorrect
+    BottomSheetCorrect,
+    CreateQuizComponent,
+    DynamicFormComponent,
+    DynamicFormQuestionComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,8 @@ import { MatListModule } from '@angular/material/list';
     MatCardModule,
     MatSliderModule,
     MatBottomSheetModule,
-    MatListModule
+    MatListModule,
+    ReactiveFormsModule
   ],
   exports: [
     MatButtonModule,

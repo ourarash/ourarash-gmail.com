@@ -1,24 +1,41 @@
 <mat-card>
-  <div class="question">Question {{ current_index + 1 }}:</div>
   <div>
-    {{ data.qas[current_index].question }}
+    <table mat-table>
+      <tr>
+        <td width="60%">
+          <div class="question">Question {{ current_index + 1 }} of {{data.qas.length}}</div>
+          <div>
+            {{ data.qas[current_index].question }}
+          </div>
+          <div
+            *ngFor="
+              let answer of data.qas[current_index].answers;
+              let i = index
+            "
+          >
+            <button
+              mat-button
+              color="primary"
+              (click)="onClickMe(i)"
+              [disabled]="disabled[i]"
+            >
+              <span>{{ i + 1 }}.</span>
+              <span class="margin-left-10">{{ answer }}</span>
+            </button>
+          </div>
+        </td>
+        <td *ngIf="data.qas[current_index].img" class="image-td">
+          <img src="{{ data.qas[current_index].img }}" class="qimage" />
+        </td>
+      </tr>
+    </table>
   </div>
-  <div>
-    <div *ngFor="let answer of data.qas[current_index].answers; let i = index">
-      <button
-        mat-button
-        color="primary"
-        (click)="onClickMe(i)"
-        [disabled]="disabled[i]"
-      >
-        {{ answer }}
-      </button>
-    </div>
-  </div>
+
+  <!-- <img src="data.qas[{{current_index}}].img /> -->
 
   <div>
     <div *ngIf="showExplanation">
-      <span  class='explanation-text'>Explanation: </span>
+      <span class="explanation-text">Explanation: </span>
       <span>{{ data.qas[current_index].explanation }}</span>
     </div>
   </div>

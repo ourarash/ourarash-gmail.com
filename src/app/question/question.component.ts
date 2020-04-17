@@ -16,102 +16,135 @@ export class QuestionComponent implements OnInit {
   data = {
     qas: [
       {
-        question: "What we should NOT do during quarantine time?",
-
+        question: "Where was Google's first international office?",
+        img: "assets/google/international.jpg",
         answers: [
-          "Wash hands",
-          "Netflix binge watch",
-          "Work on EE599 project",
-          "Stay home"
+          "Google London",
+          "Google Tokyo",
+          "Google Canada",
+          "Google Ireland",
         ],
-        explanation: "One should not spend all of his/her quarantine time watching movies!",
+        explanation: "Google launched their first international office in Tokyo.",
         correctAnswer: 1
       },
       {
-        question: "Who was a USC faculty member?",
-
+        question: "Our mission statement is: to organize the world's information and make it universally _________ and useful.",
+        img: "assets/google/mission.png",
         answers: [
-          "Lester R. Ford",
-          "Stephen Hawking",
-          "Richard E. Bellman",
-          "Robert W. Floyd"
+          "acceptable",
+          "available",
+          "accessible",
+          "addressable",
+
         ],
-        explanation: "Richard E. Bellman was a professor at the University of Southern California. In 1965, Bellman became Professor of Mathematics, Electrical Engineering, and Medicine at the University of Southern California.",
+        explanation: "to organize the world's information and make it universally accessible and useful.",
+        correctAnswer: 2
+      },
+
+      {
+        question: "What was the original name of the Google search engine?",
+        img: "assets/google/massage.jpg",
+        answers: [
+          "FootRub",
+          "YouRub",
+          "BackRub",
+          "PageRub",
+        ],
+        explanation: "They called BackRub because the program analyzed the web’s “back links” to understand how important a website was, and what other sites it related to.",
+        correctAnswer: 2
+      },
+
+      {
+        question: "Which actor stars as bogus Google intern in the movie The Internship?",
+        img: "assets/google/intern.jpg",
+        answers: [
+          "Robert Deniro",
+          "Al Pacino",
+          "Jesse Eisenberg",
+          "Vince Vaughn",
+
+        ],
+        explanation: "When Billy (Vince Vaughn) and Nick (Owen Wilson) find themselves downsized, Billy decides that, despite their complete lack of technological savvy, they should work for Google",
+        correctAnswer: 3
+      },
+      {
+        question: "Which one is the first Google Doodle?",
+        img: "assets/google/doodle.jpg",
+        answers: [
+          "PacMan",
+          "BurningMan",
+          "IronMan",
+          "SuperMan",
+        ],
+        explanation: "Larry and Sergey wanted to let users know that the Google team was at Burning Man, in case the servers went down.",
+        correctAnswer: 1
+      },
+      {
+        question: "Which one is NOT an Android name?",
+        img: "assets/google/android.jpg",
+        answers: [
+          "Cupcake",
+          "Donut",
+          "Ice Cream Cone",
+          "Kit Kat",
+        ],
+        explanation: "Ice Cream Sandwich is correct!",
         correctAnswer: 2
       },
       {
-        question: "Which one is the slowest sorting algorithm compared to others?",
-
+        question: "Google is ....",
+        img: "assets/google/google.png",
         answers: [
-          "Merge sort",
-          "Bubble sort",
-          "Selection sort",
-          "Heap sort"
+          "Larry Page's real last name",
+          "Sergey Brin's real last name",
+          "A misspelling",
+          "A word that means 10^100",
         ],
-        explanation: "While both Selection and Bubble sort are O(n), bubble sort has much worse performance.",
-        correctAnswer: 1
+        explanation: "Google is a misspelling of the word Googol which means 10^100.",
+        correctAnswer: 2
       },
-      {
-        question: "What’s the one thing highschool students in the US are most likely to forget to bring to class?",
 
+      {
+        question: "Where is the second rooftop at LAX?",
+        img: "assets/google/rooftop.jpeg",
         answers: [
-          "Pen/Pencil",
-          "Homework",
-          "Book",
-          "Calculator"
+          "Bin 1",
+          "Bin 2",
+          "Bin 7",
+          "Bin 6",
         ],
-        explanation: "In a survey of 100 US high school students, 62 students answered Pen/Pencil.",
+        explanation: "Bin 2 and bin 7 have rooftops. Bin 7's rooftop is much smaller.",
+        correctAnswer: 2
+      },
+
+      {
+        question: "What company was at LAX campus before Google?",
+        img: "assets/google/binacular.jpg",
+        answers: [
+          "Chiat Day",
+          "Snapchat",
+          "Craigslist",
+          "UCLA",
+        ],
+        explanation: "Frank Gehry originally designed the Binoculars Building for Chiat Day, which is the American division of the advertising agency TBWA Worldwide. ",
         correctAnswer: 0
       },
+
       {
-        question: "What’s the most common excuse when students don’t do homework?",
-
+        question: "How much money per day would you receive as incentive if you don't park at LAX campus?",
+        img: "assets/google/parking.jpg",
         answers: [
-          "No time/Too busy",
-          "Work/Job",
-          "What homework??",
-          "Forgot",
+          "$6.75",
+          "$6.81",
+          "$6.85",
+          "$7.00",
         ],
-        explanation: "In a survey of 100 US high school students, 39 students answered they forgot.",
-        correctAnswer: 3
-      }, {
-        question: "If a student is distracted by their phone, what app are they most likely playing with?",
-
-        answers: [
-          "Instagram",
-          "Snapchat",
-          "YouTube",
-          "Zoom"
-        ],
-        explanation: "In a survey of 100 US high school students, 68 students answered Snapchat.",
-        correctAnswer: 1
-      }, {
-        question: "What are professors' drink of choice?",
-
-        answers: [
-
-          "Milk",
-          "Tea",
-          "Apple martini",
-          "Coffee",
-
-        ],
-        explanation: "It's a very well known fact that professors cannot go on without coffee.",
-        correctAnswer: 3
-      },
-      {
-        question: "If a professor provides a hint for a question in the midterm, what does it mean?",
-        answers: [
-
-          "Hint is for stupid people. Ignore!",
-          "The professor has too much extra time.",
-          "We should use it!",
-          "What hint?",
-
-        ],
-        explanation: "Just pay attention to hints guys.",
+        explanation: "The current incentive is $6.85. See go/A2B-LAX for more info.",
         correctAnswer: 2
-      }]
+      },
+
+
+    ]
   }
   constructor(private _bottomSheet: MatBottomSheet) { this.init(); }
 
@@ -121,7 +154,7 @@ export class QuestionComponent implements OnInit {
   onClickMe(i) {
     if (this.data.qas[this.current_index].correctAnswer === i) {
       this._bottomSheet.open(BottomSheetCorrect);
-      this.showExplanation= true;
+      this.showExplanation = true;
 
     } else {
       this._bottomSheet.open(BottomSheetError);

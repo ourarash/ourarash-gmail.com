@@ -11,10 +11,23 @@
   margin-top: 20px !important;
 }
 
+.margin-left-10 {
+  margin-left: 10px !important;
+}
+
 .question {
   font-weight: bold;
 }
 
 .explanation-text {
   font-weight: bold;
+}
+.qimage {
+  max-width: 250px;
+  max-height: 250px;
+  border: 5px solid black;
+}
+
+.image-td {
+  text-align: right;
 }
